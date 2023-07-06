@@ -58,9 +58,9 @@ exports.config = {
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         'appium:platformName': 'Android', // or "iOS"
-        'appium:platformVersion': '13.0', // Android Level or "16.2" (for running iOS v16)
-        'appium:deviceName': 'Pixel 6 API 33 Level 13', // or "iPhone Simulator"
-        'appium:automationName': 'UiAutomator2', // or "XCUITest"
+        'appium:platformVersion': '11.0', // Android Level or "16.2" (for running iOS v16)
+        'appium:deviceName': 'Pixel 4 API 30 Level 11', // or "iPhone Simulator"
+        'appium:automationName': 'UIAutomator2', // or "XCUITest"
         //To be full path: e.g. we use path .join --> /Users/askeledzija/workspace/webdriverio/app/android/ApiDemos-debug.apk
         'appium:app': path.join(process.cwd(),'app/android/ApiDemos-debug.apk')
     }],

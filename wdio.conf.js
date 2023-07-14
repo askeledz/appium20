@@ -7,7 +7,7 @@ exports.config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    
+
     port: 4723,
     //
     // ==================
@@ -62,7 +62,15 @@ exports.config = {
         'appium:deviceName': 'Pixel 4 API 30 Level 11', // or "iPhone Simulator"
         'appium:automationName': 'UIAutomator2', // or "XCUITest"
         //To be full path: e.g. we use path .join --> /Users/askeledzija/workspace/webdriverio/app/android/ApiDemos-debug.apk
-        'appium:app': path.join(process.cwd(),'app/android/ApiDemos-debug.apk')
+        //'appium:app': path.join(process.cwd(), 'app/android/ApiDemos-debug.apk')
+        'appium:app': path.join(process.cwd(), 'app/android/Android-MyDemoAppRN.1.3.0.build-244.apk')
+        //ios
+        //'appium:platformName': 'iOS', // or "iOS"
+        //'appium:platformVersion': '16.4', // Android Level or "16.2" (for running iOS v16)
+        //'appium:deviceName': 'iPhone 14', // or "iPhone Simulator"
+        //'appium:automationName': 'XCUITest', // or "XCUITest"
+        //'appium:app': path.join(process.cwd(), 'app/ios/MyRNDemoApp.app')
+
     }],
     //
     // ===================
@@ -112,7 +120,7 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['appium'],
-    
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -135,7 +143,7 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec'],
 
-    
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

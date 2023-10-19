@@ -7,8 +7,9 @@
     "@wdio/mocha-framework": "^8.11.0",
     "@wdio/spec-reporter": "^8.11.2",
     "appium": "^2.0.0-rc.5",
+    "appium-uiautomator2-driver": "^2.29.2",
     "appium-xcuitest-driver": "^4.32.11",
-    "appium-uiautomator2-driver": "^2.29.2"
+    "wdio-mochawesome-reporter": "^4.0.0"
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js"

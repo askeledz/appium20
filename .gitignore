@@ -3,6 +3,7 @@ app/ios/.DS_Store
 app/ios/MyDemoApp.app/
 app/ios/iOS-Real-Device-MyRNDemoApp.1.3.0-162.ipa
 app/tv/
+Results/
 # Logs
 logs
 *.log

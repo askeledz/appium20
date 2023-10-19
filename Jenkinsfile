@@ -16,7 +16,7 @@ pipeline {
         stage('Testing'){
             steps {
                 //in case of Win OS use "bat" instead "sh"
-                sh "npm install"
+                sh "npm install --force"
                 sh "npx wdio"
             }
         }

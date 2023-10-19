@@ -56,21 +56,38 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
-        'appium:platformName': 'Android', // or "iOS"
-        'appium:platformVersion': '11.0', // Android Level or "16.2" (for running iOS v16)
-        'appium:deviceName': 'Pixel 4 API 30 Level 11', // or "iPhone Simulator"
-        'appium:automationName': 'UIAutomator2', // or "XCUITest"
+        //Android Emulator
+        //'appium:platformName': 'Android', // or "iOS"
+        //'appium:platformVersion': '11.0', // Android Level or "16.2" (for running iOS v16)
+        //'appium:deviceName': 'Pixel 4 API 30 Level 11', // or "iPhone Simulator"
+        //'appium:automationName': 'UIAutomator2', // or "XCUITest"
         //To be full path: e.g. we use path .join --> /Users/askeledzija/workspace/webdriverio/app/android/ApiDemos-debug.apk
         //'appium:app': path.join(process.cwd(), 'app/android/ApiDemos-debug.apk')
-        'appium:app': path.join(process.cwd(), 'app/android/Android-MyDemoAppRN.1.3.0.build-244.apk')
-        //ios
+        //'appium:app': path.join(process.cwd(), 'app/android/Android-MyDemoAppRN.1.3.0.build-244.apk')
+        //ios simulator
         //'appium:platformName': 'iOS', // or "iOS"
         //'appium:platformVersion': '16.4', // Android Level or "16.2" (for running iOS v16)
         //'appium:deviceName': 'iPhone 14', // or "iPhone Simulator"
         //'appium:automationName': 'XCUITest', // or "XCUITest"
         //'appium:app': path.join(process.cwd(), 'app/ios/MyRNDemoApp.app')
-
+        //ios simulator
+        //'appium:platformName': 'iOS', // or "iOS"
+        //'appium:platformVersion': '16.5.1', // Android Level or "16.2" (for running iOS v16)
+        //'appium:deviceName': 'iPhone 12 Pro', // or "iPhone Simulator"
+        //'appium:automationName': 'XCUITest', // or "XCUITest"
+        //'appium:udid': 'auto',
+        //'appium:bundleId': 'askeledz.MyDemoApp',
+        //'appium:xcodeOrgId': 'HJDMDT63F5',
+        //'appium:xcodeSigningId': 'iPhone Developer',
+        //'appium:updatedWDABundleId': 'askeledz.MyDemoApp',
+        //'appium:app': path.join(process.cwd(), 'app/ios/iOS-Real-Device-MyRNDemoApp.1.3.0-162.ipa'),
+        //Android TV
+        'appium:app': path.join(process.cwd(), 'app/tv/app-debug#42.apk'),
+        'appium:VERSION': '12.0',
+        'appium:deviceName': 'emulator',
+        'platformName': 'Android',
+        'appium:automationName': 'UiAutomator2'
+        
     }],
     //
     // ===================

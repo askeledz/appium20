@@ -2,7 +2,7 @@ pipeline {
     /* insert Declarative Pipeline here */
     agent any
     options {
-        ansiColor('xterm')
+        //ansiColor('xterm')
     }
     //in case of linux
     tools {nodejs "Node19"}

@@ -83,7 +83,8 @@ exports.config = {
         //'appium:updatedWDABundleId': 'askeledz.MyDemoApp',
         //'appium:app': path.join(process.cwd(), 'app/ios/iOS-Real-Device-MyRNDemoApp.1.3.0-162.ipa'),
         //Android TV
-        'appium:app': path.join(process.cwd(), 'app/tv/app-debug#42.apk'),
+        //'appium:app': path.join(process.cwd(), 'app/tv/app-debug#42.apk'),
+        'appium:app': '/Users/askeledzija/workspace/appium20/app/tv/app-debug#42.apk',
         'appium:VERSION': '12.0',
         'appium:deviceName': 'emulator',
         'platformName': 'Android',

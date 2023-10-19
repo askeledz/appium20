@@ -1,4 +1,5 @@
 const path = require('path')
+const { TimelineService } = require('wdio-timeline-reporter/timeline-service');
 
 exports.config = {
     //
@@ -136,7 +137,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['appium'],
+    services: ['appium', [TimelineService]],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -158,15 +159,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [
-        'mochawesome',
-        ['mochawesome', {
-            outputDir: './Results',
-            outputFileFormat: function (opts) {
-                return `results-${opts.cid}.${opts.capabilities}.json`
-            }
-        }]
-    ],
+    reporters: [['timeline', { outputDir: './Results' }]],
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -312,10 +305,6 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    onComplete: function (exitCode, config, capabilities, results) {
-        const mergeResults = require('wdio-mochawesome-reporter/mergeResults')
-        mergeResults('./Results', "results-*")
-    }
     /**
     * Gets executed when a refresh happens.
     * @param {string} oldSessionId session ID of the old session
